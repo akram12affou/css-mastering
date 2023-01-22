@@ -1,6 +1,8 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
 *{
     padding: 0;
     margin:0;
+    font-family: 'Poppins', sans-serif;
 }
 main{
     padding: 10px 5px;
@@ -14,7 +16,8 @@ main{
 }
 
 .hum{
-    display: flex;
+
+    display: none;
     width: 30px;
     border-radius: 5px;
     background: rgb(0, 0, 0);
@@ -42,19 +45,27 @@ main{
 
 .navbar-linkss {
    position: fixed;
-   width: 30vw;
-   display: flex;
- 
+   width: 35vw;
+   display: none;
+   height:75vh;
+   background: rgb(230, 188, 188);;
+   justify-content:space-evenly;
+   overflow: hidden;
+   transition: all .3s ease;
 }
 .navbar-linkss button:hover{
-    background-color: rgb(162, 116, 57);
+    transform: scale(1.1);
     cursor: pointer;
+    color: rgb(84, 5, 5);
+    background: rgb(175, 152, 152);
 }
 .navbar-links button{
+    transition: all .2s ease;
     padding: 10px;
-    background: rgb(230, 188, 188);
+    background: rgb(190, 176, 176);
     border:none;
-    font-size: 3vw;
+    font-size: 4vw;
+    
 }
 
 .hum::before{
@@ -67,7 +78,6 @@ main{
     height: 4px;
     background-color: rgb(0, 0, 0);
     transform: translateY(10px);
-    
     }
 .humopen{
     background: rgb(144, 67, 67,0);
@@ -91,21 +101,47 @@ transform: rotate(45deg);
 .humopen::after{
     transform: rotate(-45deg);
     }
-    
+main{
+    display: flex;
+    justify-content:space-between;
+}
+
 nav ul{
     display: flex;
     flex-direction: row;
-    display: none;
-    color: rgb(193, 126, 44);
+    
+    color: rgb(0, 0, 0);
+}
+.logo{
+    display: flex;
+    justify-content: flex-start;
+}
+nav ul{
+    width: 30vw;
+    display: flex;
+    justify-content: space-around;
 }
 nav li {
-    margin-left: 10px;
+   
     list-style-type: none;
 }
 .hum_cont{
    padding: 11px 3px; 
    cursor: pointer;
+   display: none;
 }
-@media screen {
-    
-}
+@media only screen and (max-width: 700px) {
+    .hum {
+        display: flex;
+    }
+    .navbar-linkss{
+        display: flex;
+    }
+    .hum_cont{
+        display: flex;
+    }
+    nav ul{
+         display: none; 
+         
+    }
+  }

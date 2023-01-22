@@ -6,5 +6,4 @@ const h1 = document.getElementsByTagName('h1')[0]
 toggleButton.addEventListener('click', () => {
   navbarLinks.classList.toggle('navbar-linkss')
   hum.classList.toggle('humopen')
-//   console.log(hum.classList)
 })
