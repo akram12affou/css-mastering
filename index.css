@@ -1,139 +1,111 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400&display=swap');
 *{
+    padding: 0;
     margin:0;
-    padding:0;
-    font-family: 'Poppins', sans-serif;
-    font-size: 16px;
 }
-header{
-    
-    padding: 10px;
+main{
+    padding: 10px 5px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    background: rgb(0, 0, 0);
-    
-    height: 15px;
-    width: 100%;
-}
-.nav{
-    display: flex;
     align-items: center;
-    flex-direction: column;
-    background: rgb(0, 0, 0);
-    height: 100vh;
-    width: 35vw;
-    transition: all .2s ease-in-out;
-   
-}
-.content{
-    color: white;
-}
-.nav_container{
-   
-    display: none;
-    transform: translateX(35vw);
-   justify-content: flex-end;
-   z-index: 10;
-   transition: all .2s ease-in-out;
-   position: fixed;
-   left:65%;
+    background: rgb(197, 176, 176);
+    height: 20px;
+    /* width: 100vh; */
 
 }
-span{
-    display: inline;
-    margin-top: 100px;
-    color: rgb(10, 76, 25);
-    font-size: 1em;
-    cursor: pointer;
-    
-}
+
 .hum{
-    cursor: pointer;
-    display: none;
+    display: flex;
     width: 30px;
-    border-radius: 2px;
+    border-radius: 5px;
+    background: rgb(0, 0, 0);
     height: 4px;
-    background-color: rgb(255, 255, 255);
-    transition: all .2s ease-in-out;
+   transition: all .4s ease;
+    cursor: pointer;
+}
+.navbar-links{
+    color: rgb(174, 30, 30);
+    display: none;
+    flex-direction: column;
+}
+.main{
+    display: flex;
+    justify-content: flex-end;
+    
+
+}
+.body{
+    margin-top: 30px;
+    display:flex;
+    justify-content:center;
+    overflow:hidden;
 }
 
-.hum_cont{
-    margin-right: 20px;
-    cursor: pointer;
-    padding: 3px;
-    padding-top: 12px;
-    padding-bottom: 12px;
+.navbar-linkss {
+   position: fixed;
+   width: 30vw;
+   display: flex;
+ 
 }
-.hum::after,
-.hum::before {
+.navbar-linkss button:hover{
+    background-color: rgb(162, 116, 57);
+    cursor: pointer;
+}
+.navbar-links button{
+    padding: 10px;
+    background: rgb(230, 188, 188);
+    border:none;
+    font-size: 3vw;
+}
+
+.hum::before{
+    transition: all .2s ease;
+    display: flex;
     content: '';
     position: absolute;
     border-radius: 2px;
     width: 30px;
     height: 4px;
-    background-color: rgb(255, 255, 255);
-    transition: all .2s ease-in-out;
-}
-.hum::before{
-    transform: translateY(-10px);
-}
-img{
- width: 100%;
-  height: 100%;
-  position: fixed;
-  background-size: cover;
-object-fit: cover;
-
-   
-    
-}
-.hum::after{
-    transform: translateY(10px);
-}
-.logo{
-    transition: .2s ease;
-    user-select: none;
-    color: rgb(20, 203, 99);
-}
-.logo:hover{
-    letter-spacing: 3px;
-    
-}
-nav{
-    order: 1;
-    display: flex;
-    justify-content: flex-end;
-}
-
-button{
-    color: rgb(102, 153, 124);
-    transition: .2s ease-in-out;
-    margin-right:30px;
-    border : none;
-    
     background-color: rgb(0, 0, 0);
-    cursor: pointer;
+    transform: translateY(10px);
+    
+    }
+.humopen{
+    background: rgb(144, 67, 67,0);
 }
-button:hover{
-    text-decoration: underline;
-   color: rgb(23, 110, 16)
+.humopen::before{
+transform: rotate(45deg);
 }
-main{
-    display: inline;
-}
-h1{
-    display: inline;
-}
-@media only screen and (max-width: 700px) {
-   nav{
-     display: none;
-   }
-   .nav_container{
+
+.hum::after{
+    transition: all .2s ease;
     display: flex;
-   }
-   .hum{
-     display: flex;
-   }
-  }
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+    width: 30px;
+    height: 4px;
+    background-color: rgb(0, 0, 0);
+    transform: translateY(-10px);
+    transform: rotate(--hry,0);
+}
+.humopen::after{
+    transform: rotate(-45deg);
+    }
+    
+nav ul{
+    display: flex;
+    flex-direction: row;
+    display: none;
+    color: rgb(193, 126, 44);
+}
+nav li {
+    margin-left: 10px;
+    list-style-type: none;
+}
+.hum_cont{
+   padding: 11px 3px; 
+   cursor: pointer;
+}
+@media screen {
+    
+}
